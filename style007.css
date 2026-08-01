@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:flex-start;
+    align-items:center;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    background:linear-gradient(-45deg,#0f172a,#1e3a8a,#4c1d95,#111827);
+    background-size:400% 400%;
+
+    animation:bg 12s ease infinite;
+
+    padding:40px 0;
+}
+
+@keyframes bg{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+.container{
+
+    width:90%;
+    max-width:700px;
+
+    margin:50px auto;
+
+    text-align:center;
+
+    color:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:0 0 40px rgba(0,0,0,.4);
+
+    animation:fade 2s;
+
+}
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+h1{
+
+font-size:55px;
+
+margin:20px 0;
+
+}
+
+h2{
+
+margin-bottom:20px;
+
+font-weight:normal;
+
+}
+
+p{
+
+font-size:18px;
+
+line-height:30px;
+
+margin-bottom:35px;
+
+}
+
+button{
+
+padding:16px 45px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+cursor:pointer;
+
+background:#ff4d88;
+
+color:white;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+background:#ff0066;
+
+box-shadow:0 0 25px #ff4d88;
+
+}
+.letter{
+    margin-top:40px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+}
+
+.letter h2{
+    margin-bottom:20px;
+}
+
+.letter p{
+    line-height:35px;
+    font-size:18px;
+}
+#hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d88;
+    font-size:20px;
+    animation:float 6s linear forwards;
+}
+
+@keyframes float{
+
+0%{
+    transform:translateY(0) scale(0.5);
+    opacity:1;
+}
+
+100%{
+    transform:translateY(-100vh) scale(1.5);
+    opacity:0;
+}
+
+}
